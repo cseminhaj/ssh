@@ -1,4 +1,5 @@
 #!/bin/bash
+#@misbah uddin
 GATEWAY="uddin@172.31.212.81"
 HOSTS=("ubuntu@10.10.12.198" "ubuntu@10.10.12.209" "ubuntu@10.10.12.214")
 sshlen=${#HOSTS[@]}
