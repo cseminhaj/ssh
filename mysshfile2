@@ -1,0 +1,1 @@
+ssh -A -t uddin@172.31.212.81 ssh -A -t ubuntu@10.10.12.214

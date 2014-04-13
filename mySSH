@@ -1,0 +1,17 @@
+#!/bin/bash
+GATEWAY="uddin@172.31.212.81"
+HOSTS=("ubuntu@10.10.12.198" "ubuntu@10.10.12.209" "ubuntu@10.10.12.214")
+sshlen=${#HOSTS[@]}
+for (( i=0; i<$sshlen; i++ ))
+do
+	echo "#!/bin/bash" > mysshfile$i
+	
+	#sample: ssh -A -t uddin@172.31.212.81 ssh -A -t ubuntu@10.10.12.209
+	echo "ssh -A -t $GATEWAY ssh -A -t ${HOSTS[$i]}" > mysshfile$i
+	chmod 755 mysshfile$i
+done
+
+for (( i=0; i<$sshlen; i++ ))
+do      
+	open -a Terminal.app mysshfile$i    
+done

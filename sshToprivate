@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh uddin@172.31.212.81 |  ssh ubuntu@10.10.12.209
